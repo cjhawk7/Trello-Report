@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trello Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="date.js"></script>
+</head>
+
+<body>
+    <div class="topnav1">
+        <img class="image2" src="trello.jpg" />
+    </div>
+    <div class="topnav2">
+        <img class="image1" src="thehub.jpg" />
+    </div>
+
+    <main>
+
+        <fieldset>
+            <h2>Filters</h2>
+            <div class="inputs">
+                <label for="start">From:</label>
+                <input type="date" id="from" name="calendar" value="" min="" max="" />
+            </div>
+
+            <div class="inputs">
+                <label for="end">To:</label>
+                <input type="date" id="to" name="calendar" value="" min="" max="" />
+            </div>
+            <div class="buttons">
+                <h3>Quick Filters</h3>
+                <button type="submit" class="alltime" checked>All Time</button>
+                <button type="submit" class="yesterday">Yesterday</button>
+                <button type="submit" class="sevendays">Last 7 Days</button>
+                <button type="submit" class="thirtydays">Last 30 Days</button>
+                <button type="submit" class="sixmonths">Last 6 Months</button>
+                <button type="submit" class="clearfilter">Clear Filter</button>
+            </div>
+        </fieldset>
+
+
+        <div class="wrapper">
+            <h2>Reports</h2>
+            <div class="container">
+                <h3>Licensed Users</h3>
+                <p></p>
+                <div class="num lu">
+
+                </div>
+            </div>
+            <div class="container">
+                <h3>Members</h3>
+                <p></p>
+                <div class="num m">
+
+                </div>
+            </div>
+            <div class="container">
+                <h3>Deleted Boards</h3>
+                <p></p>
+                <div class="num db">
+
+                </div>
+            </div>
+            <div class="container">
+                <h3>Inactive Users</h3>
+                <p></p>
+                <div class="num iu">
+
+                </div>
+            </div>
+            <div class="container">
+                <h3>Archieved Boards</h3>
+                <p></p>
+                <div class="num arb">
+
+                </div>
+            </div>
+            <div class="container">
+                <h3>Active Boards</h3>
+                <p></p>
+                <div class="num ab">
+
+                </div>
+            </div>
+            <div class="containerlarge">
+                <h3>Activity Log</h3>
+                <p></p>
+                <div class="actheaders">
+                    <h4 class="activetype">Activity Type</h4>
+                    <h4 class="number">Number</h4>
+                </div>
+                <div class="activity">
+                    <div class="column"></div>
+                </div>
+            </div>
+
+    </main>
+
+    <div class="footer">
+
+        <p class="copyright">Grand Canyon University &copy | All Rights Reserved</p>
+        <p class="powered">Powered by | Academic Web Services</p>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+
+</html>
