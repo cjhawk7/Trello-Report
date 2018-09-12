@@ -198,6 +198,7 @@ function displayAllTime(data) {
     $('.db').append(data.deletedBoardCount);
     $('.ab').append(data.activeBoardCount);
     $('.arb').append(data.archivedBoardCount);
+    $("button").attr('disabled', false);
 }
 
 function displayActivityAllTime(data) {
@@ -224,6 +225,7 @@ function displayYesterday(data) {
     $('.db').append(data.deletedBoardCount);
     $('.ab').append(data.activeBoardCount);
     $('.arb').append(data.archivedBoardCount);
+    $("button").attr('disabled', false);
 }
 
 function displayActivityYesterday(data) {
@@ -250,6 +252,7 @@ function displaySevenDays(data) {
     $('.db').append(data.deletedBoardCount);
     $('.ab').append(data.activeBoardCount);
     $('.arb').append(data.archivedBoardCount);
+    $("button").attr('disabled', false);
 }
 
 function displayActivitySevenDays(data) {
@@ -276,6 +279,7 @@ function displayThirtyDays(data) {
     $('.db').append(data.deletedBoardCount);
     $('.ab').append(data.activeBoardCount);
     $('.arb').append(data.archivedBoardCount);
+    $("button").attr('disabled', false);
 }
 
 function displayActivityThirtyDays(data) {
@@ -302,6 +306,7 @@ function displaySixMonths(data) {
     $('.db').append(data.deletedBoardCount);
     $('.ab').append(data.activeBoardCount);
     $('.arb').append(data.archivedBoardCount);
+    $("button").attr('disabled', false);
 }
 
 function displayActivitySixMonths(data) {
@@ -320,6 +325,10 @@ function displayActivitySixMonths(data) {
 }
 
 function clickHandlers() {
+
+    $("button").on("click", function () {
+        $("button").attr('disabled', true);
+    });
 
     $(document).ready(function () {
         $('.alltime').trigger('click');
@@ -356,7 +365,6 @@ function clickHandlers() {
         $('.containerlarge p').text('');
         getYesterday(displayYesterday);
         activityYesterday(displayActivityYesterday);
-        // $(".yesterday").attr('disabled', true);
     });
 
     $(".sevendays").on("click", function () {
