@@ -12,12 +12,9 @@ const sixMonths = Date.parse('today - 6 months').toString('yyyy-MM-dd');
 let queryTargetFrom;
 let queryTargetTo;
 
-console.log(today);
+
 
 function getTimeCalendar(callback) {
-    console.log(queryTargetFrom);
-    console.log(queryTargetTo);
-    console.log(typeof queryTargetFrom);
 
     const settings = {
         url: urlString + "/start/" + queryTargetFrom + "/end/" + queryTargetTo,
@@ -175,18 +172,18 @@ function displayTimeCalendar(data) {
 }
 
 function displayActivityCalendar(data) {
-    $('.activity').append('Comments ' + '<div class="column">' + data.actionCounts.commentCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Created ' + '<div class="column">' + data.actionCounts.createCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Moved ' + '<div class="column">' + data.actionCounts.moveCardFromBoard + data.actionCounts.moveCardToBoard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Duplicated ' + '<div class="column">' + data.actionCounts.copyCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
-    $('.activity').append('Cards Deleted ' + '<div class="column">' + data.actionCounts.deleteCard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Created ' + '<div class="column">' + data.actionCounts.createList + '</div>' + '<br></br>');
-    $('.activity').append('Lists Moved ' + '<div class="column">' + data.actionCounts.moveListFromBoard + data.actionCounts.moveListToBoard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Duplicated ' + '<div class="column">' + data.actionCounts.copyBoard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
-    $('.activity').append('Lists Deleted ' + '<div class="column">' + data.actionCounts.removeChecklistFromCard + '</div>' + '<br></br>');
-    $('.activity').append('Unique Labels ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
+    $('.activity').append('Comments ' + '<div class="column">' + data.actionCounts.commentCard + '</div>' + '<br></br>')
+        .append('Cards Created ' + '<div class="column">' + data.actionCounts.createCard + '</div>' + '<br></br>')
+        .append('Cards Moved ' + '<div class="column">' + data.actionCounts.moveCardFromBoard + data.actionCounts.moveCardToBoard + '</div>' + '<br></br>')
+        .append('Cards Duplicated ' + '<div class="column">' + data.actionCounts.copyCard + '</div>' + '<br></br>')
+        .append('Cards Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
+        .append('Cards Deleted ' + '<div class="column">' + data.actionCounts.deleteCard + '</div>' + '<br></br>')
+        .append('Lists Created ' + '<div class="column">' + data.actionCounts.createList + '</div>' + '<br></br>')
+        .append('Lists Moved ' + '<div class="column">' + data.actionCounts.moveListFromBoard + data.actionCounts.moveListToBoard + '</div>' + '<br></br>')
+        .append('Lists Duplicated ' + '<div class="column">' + data.actionCounts.copyBoard + '</div>' + '<br></br>')
+        .append('Lists Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
+        .append('Lists Deleted ' + '<div class="column">' + data.actionCounts.removeChecklistFromCard + '</div>' + '<br></br>')
+        .append('Unique Labels ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
 }
 
 function displayAllTime(data) {
@@ -202,18 +199,18 @@ function displayAllTime(data) {
 }
 
 function displayActivityAllTime(data) {
-    $('.activity').append('Comments ' + '<div class="column">' + data.actionCounts.commentCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Created ' + '<div class="column">' + data.actionCounts.createCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Moved ' + '<div class="column">' + data.actionCounts.moveCardFromBoard + data.actionCounts.moveCardToBoard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Duplicated ' + '<div class="column">' + data.actionCounts.copyCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
-    $('.activity').append('Cards Deleted ' + '<div class="column">' + data.actionCounts.deleteCard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Created ' + '<div class="column">' + data.actionCounts.createList + '</div>' + '<br></br>');
-    $('.activity').append('Lists Moved ' + '<div class="column">' + data.actionCounts.moveListFromBoard + data.actionCounts.moveListToBoard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Duplicated ' + '<div class="column">' + data.actionCounts.copyBoard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
-    $('.activity').append('Lists Deleted ' + '<div class="column">' + data.actionCounts.removeChecklistFromCard + '</div>' + '<br></br>');
-    $('.activity').append('Unique Labels ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
+    $('.activity').append('Comments ' + '<div class="column">' + data.actionCounts.commentCard + '</div>' + '<br></br>')
+        .append('Cards Created ' + '<div class="column">' + data.actionCounts.createCard + '</div>' + '<br></br>')
+        .append('Cards Moved ' + '<div class="column">' + data.actionCounts.moveCardFromBoard + data.actionCounts.moveCardToBoard + '</div>' + '<br></br>')
+        .append('Cards Duplicated ' + '<div class="column">' + data.actionCounts.copyCard + '</div>' + '<br></br>')
+        .append('Cards Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
+        .append('Cards Deleted ' + '<div class="column">' + data.actionCounts.deleteCard + '</div>' + '<br></br>')
+        .append('Lists Created ' + '<div class="column">' + data.actionCounts.createList + '</div>' + '<br></br>')
+        .append('Lists Moved ' + '<div class="column">' + data.actionCounts.moveListFromBoard + data.actionCounts.moveListToBoard + '</div>' + '<br></br>')
+        .append('Lists Duplicated ' + '<div class="column">' + data.actionCounts.copyBoard + '</div>' + '<br></br>')
+        .append('Lists Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
+        .append('Lists Deleted ' + '<div class="column">' + data.actionCounts.removeChecklistFromCard + '</div>' + '<br></br>')
+        .append('Unique Labels ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
 }
 
 function displayYesterday(data) {
@@ -229,18 +226,18 @@ function displayYesterday(data) {
 }
 
 function displayActivityYesterday(data) {
-    $('.activity').append('Comments ' + '<div class="column">' + data.actionCounts.commentCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Created ' + '<div class="column">' + data.actionCounts.createCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Moved ' + '<div class="column">' + data.actionCounts.moveCardFromBoard + data.actionCounts.moveCardToBoard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Duplicated ' + '<div class="column">' + data.actionCounts.copyCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
-    $('.activity').append('Cards Deleted ' + '<div class="column">' + data.actionCounts.deleteCard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Created ' + '<div class="column">' + data.actionCounts.createList + '</div>' + '<br></br>');
-    $('.activity').append('Lists Moved ' + '<div class="column">' + data.actionCounts.moveListFromBoard + data.actionCounts.moveListToBoard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Duplicated ' + '<div class="column">' + data.actionCounts.copyBoard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
-    $('.activity').append('Lists Deleted ' + '<div class="column">' + data.actionCounts.removeChecklistFromCard + '</div>' + '<br></br>');
-    $('.activity').append('Unique Labels ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
+    $('.activity').append('Comments ' + '<div class="column">' + data.actionCounts.commentCard + '</div>' + '<br></br>')
+        .append('Cards Created ' + '<div class="column">' + data.actionCounts.createCard + '</div>' + '<br></br>')
+        .append('Cards Moved ' + '<div class="column">' + data.actionCounts.moveCardFromBoard + data.actionCounts.moveCardToBoard + '</div>' + '<br></br>')
+        .append('Cards Duplicated ' + '<div class="column">' + data.actionCounts.copyCard + '</div>' + '<br></br>')
+        .append('Cards Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
+        .append('Cards Deleted ' + '<div class="column">' + data.actionCounts.deleteCard + '</div>' + '<br></br>')
+        .append('Lists Created ' + '<div class="column">' + data.actionCounts.createList + '</div>' + '<br></br>')
+        .append('Lists Moved ' + '<div class="column">' + data.actionCounts.moveListFromBoard + data.actionCounts.moveListToBoard + '</div>' + '<br></br>')
+        .append('Lists Duplicated ' + '<div class="column">' + data.actionCounts.copyBoard + '</div>' + '<br></br>')
+        .append('Lists Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
+        .append('Lists Deleted ' + '<div class="column">' + data.actionCounts.removeChecklistFromCard + '</div>' + '<br></br>')
+        .append('Unique Labels ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
 }
 
 function displaySevenDays(data) {
@@ -256,18 +253,18 @@ function displaySevenDays(data) {
 }
 
 function displayActivitySevenDays(data) {
-    $('.activity').append('Comments ' + '<div class="column">' + data.actionCounts.commentCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Created ' + '<div class="column">' + data.actionCounts.createCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Moved ' + '<div class="column">' + data.actionCounts.moveCardFromBoard + data.actionCounts.moveCardToBoard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Duplicated ' + '<div class="column">' + data.actionCounts.copyCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
-    $('.activity').append('Cards Deleted ' + '<div class="column">' + data.actionCounts.deleteCard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Created ' + '<div class="column">' + data.actionCounts.createList + '</div>' + '<br></br>');
-    $('.activity').append('Lists Moved ' + '<div class="column">' + data.actionCounts.moveListFromBoard + data.actionCounts.moveListToBoard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Duplicated ' + '<div class="column">' + data.actionCounts.copyBoard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
-    $('.activity').append('Lists Deleted ' + '<div class="column">' + data.actionCounts.removeChecklistFromCard + '</div>' + '<br></br>');
-    $('.activity').append('Unique Labels ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
+    $('.activity').append('Comments ' + '<div class="column">' + data.actionCounts.commentCard + '</div>' + '<br></br>')
+        .append('Cards Created ' + '<div class="column">' + data.actionCounts.createCard + '</div>' + '<br></br>')
+        .append('Cards Moved ' + '<div class="column">' + data.actionCounts.moveCardFromBoard + data.actionCounts.moveCardToBoard + '</div>' + '<br></br>')
+        .append('Cards Duplicated ' + '<div class="column">' + data.actionCounts.copyCard + '</div>' + '<br></br>')
+        .append('Cards Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
+        .append('Cards Deleted ' + '<div class="column">' + data.actionCounts.deleteCard + '</div>' + '<br></br>')
+        .append('Lists Created ' + '<div class="column">' + data.actionCounts.createList + '</div>' + '<br></br>')
+        .append('Lists Moved ' + '<div class="column">' + data.actionCounts.moveListFromBoard + data.actionCounts.moveListToBoard + '</div>' + '<br></br>')
+        .append('Lists Duplicated ' + '<div class="column">' + data.actionCounts.copyBoard + '</div>' + '<br></br>')
+        .append('Lists Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
+        .append('Lists Deleted ' + '<div class="column">' + data.actionCounts.removeChecklistFromCard + '</div>' + '<br></br>')
+        .append('Unique Labels ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
 }
 
 function displayThirtyDays(data) {
@@ -283,18 +280,18 @@ function displayThirtyDays(data) {
 }
 
 function displayActivityThirtyDays(data) {
-    $('.activity').append('Comments ' + '<div class="column">' + data.actionCounts.commentCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Created ' + '<div class="column">' + data.actionCounts.createCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Moved ' + '<div class="column">' + data.actionCounts.moveCardFromBoard + data.actionCounts.moveCardToBoard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Duplicated ' + '<div class="column">' + data.actionCounts.copyCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
-    $('.activity').append('Cards Deleted ' + '<div class="column">' + data.actionCounts.deleteCard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Created ' + '<div class="column">' + data.actionCounts.createList + '</div>' + '<br></br>');
-    $('.activity').append('Lists Moved ' + '<div class="column">' + data.actionCounts.moveListFromBoard + data.actionCounts.moveListToBoard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Duplicated ' + '<div class="column">' + data.actionCounts.copyBoard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
-    $('.activity').append('Lists Deleted ' + '<div class="column">' + data.actionCounts.removeChecklistFromCard + '</div>' + '<br></br>');
-    $('.activity').append('Unique Labels ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
+    $('.activity').append('Comments ' + '<div class="column">' + data.actionCounts.commentCard + '</div>' + '<br></br>')
+        .append('Cards Created ' + '<div class="column">' + data.actionCounts.createCard + '</div>' + '<br></br>')
+        .append('Cards Moved ' + '<div class="column">' + data.actionCounts.moveCardFromBoard + data.actionCounts.moveCardToBoard + '</div>' + '<br></br>')
+        .append('Cards Duplicated ' + '<div class="column">' + data.actionCounts.copyCard + '</div>' + '<br></br>')
+        .append('Cards Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
+        .append('Cards Deleted ' + '<div class="column">' + data.actionCounts.deleteCard + '</div>' + '<br></br>')
+        .append('Lists Created ' + '<div class="column">' + data.actionCounts.createList + '</div>' + '<br></br>')
+        .append('Lists Moved ' + '<div class="column">' + data.actionCounts.moveListFromBoard + data.actionCounts.moveListToBoard + '</div>' + '<br></br>')
+        .append('Lists Duplicated ' + '<div class="column">' + data.actionCounts.copyBoard + '</div>' + '<br></br>')
+        .append('Lists Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
+        .append('Lists Deleted ' + '<div class="column">' + data.actionCounts.removeChecklistFromCard + '</div>' + '<br></br>')
+        .append('Unique Labels ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
 }
 
 function displaySixMonths(data) {
@@ -310,18 +307,18 @@ function displaySixMonths(data) {
 }
 
 function displayActivitySixMonths(data) {
-    $('.activity').append('Comments ' + '<div class="column">' + data.actionCounts.commentCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Created ' + '<div class="column">' + data.actionCounts.createCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Moved ' + '<div class="column">' + data.actionCounts.moveCardFromBoard + data.actionCounts.moveCardToBoard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Duplicated ' + '<div class="column">' + data.actionCounts.copyCard + '</div>' + '<br></br>');
-    $('.activity').append('Cards Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
-    $('.activity').append('Cards Deleted ' + '<div class="column">' + data.actionCounts.deleteCard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Created ' + '<div class="column">' + data.actionCounts.createList + '</div>' + '<br></br>');
-    $('.activity').append('Lists Moved ' + '<div class="column">' + data.actionCounts.moveListFromBoard + data.actionCounts.moveListToBoard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Duplicated ' + '<div class="column">' + data.actionCounts.copyBoard + '</div>' + '<br></br>');
-    $('.activity').append('Lists Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
-    $('.activity').append('Lists Deleted ' + '<div class="column">' + data.actionCounts.removeChecklistFromCard + '</div>' + '<br></br>');
-    $('.activity').append('Unique Labels ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>');
+    $('.activity').append('Comments ' + '<div class="column">' + data.actionCounts.commentCard + '</div>' + '<br></br>')
+        .append('Cards Created ' + '<div class="column">' + data.actionCounts.createCard + '</div>' + '<br></br>')
+        .append('Cards Moved ' + '<div class="column">' + data.actionCounts.moveCardFromBoard + data.actionCounts.moveCardToBoard + '</div>' + '<br></br>')
+        .append('Cards Duplicated ' + '<div class="column">' + data.actionCounts.copyCard + '</div>' + '<br></br>')
+        .append('Cards Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
+        .append('Cards Deleted ' + '<div class="column">' + data.actionCounts.deleteCard + '</div>' + '<br></br>')
+        .append('Lists Created ' + '<div class="column">' + data.actionCounts.createList + '</div>' + '<br></br>')
+        .append('Lists Moved ' + '<div class="column">' + data.actionCounts.moveListFromBoard + data.actionCounts.moveListToBoard + '</div>' + '<br></br>')
+        .append('Lists Duplicated ' + '<div class="column">' + data.actionCounts.copyBoard + '</div>' + '<br></br>')
+        .append('Lists Archieved ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
+        .append('Lists Deleted ' + '<div class="column">' + data.actionCounts.removeChecklistFromCard + '</div>' + '<br></br>')
+        .append('Unique Labels ' + '<div class="column">' + 'no info' + '</div>' + '<br></br>')
 }
 
 function clickHandlers() {
@@ -336,7 +333,7 @@ function clickHandlers() {
 
     $("input").on("click", function () {
         queryTargetFrom = $("#from").val();
-        console.log(queryTargetFrom);
+
     });
 
     $("input").on("click", function () {
