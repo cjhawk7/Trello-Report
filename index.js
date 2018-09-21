@@ -42,117 +42,10 @@ function getActivityCalendar(callback) {
     $.ajax(settings);
 }
 
-function getAllTime(callback) {
+function getCalendarAllTime(urlstring, timeline, callback) {
+
     const settings = {
-        url: urlString,
-        dataType: "json",
-        type: "GET",
-        success: callback,
-        contentType: "application/json"
-    };
-
-    $.ajax(settings);
-}
-
-function activityAllTime(callback) {
-    const settings = {
-        url: urlStringActivity,
-        dataType: "json",
-        type: "GET",
-        success: callback,
-        contentType: "application/json"
-    };
-
-    $.ajax(settings);
-}
-
-function activityYesterday(callback) {
-    const settings = {
-        url: urlStringActivity + "/start/" + yesterday + "/end/" + today,
-        dataType: "json",
-        type: "GET",
-        success: callback,
-        contentType: "application/json"
-    };
-
-    $.ajax(settings);
-}
-
-function getYesterday(callback) {
-    const settings = {
-        url: urlString + "/start/" + yesterday + "/end/" + today,
-        dataType: "json",
-        type: "GET",
-        success: callback,
-        contentType: "application/json"
-    };
-
-    $.ajax(settings);
-}
-
-function getSevenDays(callback) {
-    const settings = {
-        url: urlString + "/start/" + sevenDays + "/end/" + today,
-        dataType: "json",
-        type: "GET",
-        success: callback,
-        contentType: "application/json"
-    };
-
-    $.ajax(settings);
-}
-
-function activitySevenDays(callback) {
-    const settings = {
-        url: urlStringActivity + "/start/" + sevenDays + "/end/" + today,
-        dataType: "json",
-        type: "GET",
-        success: callback,
-        contentType: "application/json"
-    };
-
-    $.ajax(settings);
-}
-
-function getThirtyDays(callback) {
-    const settings = {
-        url: urlString + "/start/" + thirtyDays + "/end/" + today,
-        dataType: "json",
-        type: "GET",
-        success: callback,
-        contentType: "application/json"
-    };
-
-    $.ajax(settings);
-}
-
-function activityThirtyDays(callback) {
-    const settings = {
-        url: urlStringActivity + "/start/" + thirtyDays + "/end/" + today,
-        dataType: "json",
-        type: "GET",
-        success: callback,
-        contentType: "application/json"
-    };
-
-    $.ajax(settings);
-}
-
-function getSixMonths(callback) {
-    const settings = {
-        url: urlString + "/start/" + sixMonths + "/end/" + today,
-        dataType: "json",
-        type: "GET",
-        success: callback,
-        contentType: "application/json"
-    };
-
-    $.ajax(settings);
-}
-
-function activitySixMonths(callback) {
-    const settings = {
-        url: urlStringActivity + "/start/" + sixMonths + "/end/" + today,
+        url: urlstring + "/start/" + timeline + "/end/" + today,
         dataType: "json",
         type: "GET",
         success: callback,
@@ -345,8 +238,8 @@ function clickHandlers() {
         $('.activity').text('');
         $('.container p').text('');
         $('.containerlarge p').text('');
-        getAllTime(displayAllTime);
-        activityAllTime(displayActivityAllTime);
+        getCalendarAllTime(urlString, displayAllTime);
+        getCalendarAllTime(urlStringActivity, displayActivityAllTime);
     });
 
     $(".yesterday").on("click", function () {
@@ -354,9 +247,8 @@ function clickHandlers() {
         $('.activity').text('');
         $('.container p').text('');
         $('.containerlarge p').text('');
-        getYesterday(displayYesterday);
-        activityYesterday(displayActivityYesterday);
-        // $(".yesterday").attr('disabled', true);
+        getCalendarAllTime(urlString, yesterday, displayYesterday);
+        getCalendarAllTime(urlStringActivity, yesterday, displayActivityYesterday);
     });
 
     $(".sevendays").on("click", function () {
@@ -364,8 +256,8 @@ function clickHandlers() {
         $('.activity').text('');
         $('.container p').text('');
         $('.containerlarge p').text('');
-        getSevenDays(displaySevenDays);
-        activitySevenDays(displayActivitySevenDays)
+        getCalendarAllTime(urlString, sevenDays, displaySevenDays);
+        getCalendarAllTime(urlStringActivity, sevenDays, displayActivitySevenDays);
     });
 
     $(".thirtydays").on("click", function () {
@@ -373,8 +265,8 @@ function clickHandlers() {
         $('.activity').text('');
         $('.container p').text('');
         $('.containerlarge p').text('');
-        getThirtyDays(displayThirtyDays);
-        activityThirtyDays(displayActivityThirtyDays)
+        getCalendarAllTime(urlString, thirtyDays, displayThirtyDays);
+        getCalendarAllTime(urlStringActivity, thirtyDays, displayActivityThirtyDays);
     });
 
     $(".sixmonths").on("click", function () {
@@ -382,8 +274,8 @@ function clickHandlers() {
         $('.activity').text('');
         $('.container p').text('');
         $('.containerlarge p').text('');
-        getSixMonths(displaySixMonths);
-        activitySixMonths(displayActivitySixMonths)
+        getCalendarAllTime(urlString, sixMonths, displaySixMonths);
+        getCalendarAllTime(urlStringActivity, sixMonths, displayActivitySixMonths);
     });
 
     $(".clearfilter").on("click", function () {
@@ -394,7 +286,6 @@ function clickHandlers() {
     });
 
 }
-
 
 $(function () {
     clickHandlers();
